@@ -1,0 +1,8 @@
+AUTHOR
+------
+
+Elias Vanderstuyft (Elias.vds[at]gmail.com)
+        Parts (for jack) are based on the code of the sampler program called 'Specimen',
+        and (for pulse-simple) on the code example 'parec-simple.c' on 'freedesktop.org'.
+        For expansion using the standard pulse lib (so not pulse-simple),
+        I suggest to look at the 'pavucontrol' source code as a guiding line.
