@@ -47,10 +47,8 @@ you may want to shift both micro's respectively 5ms and 3ms back in time.)
 
 = Dependencies =
 
-* pulseaudio (and libs) >= 0.9.21
-
-* jack-audio-connection-kit (and libs) >= 1.9.4
-
+  * pulseaudio (and libs) >= 0.9.21
+  * jack-audio-connection-kit (and libs) >= 1.9.4
 To compile, you'll need the corresponding devel packages as well.
 
 
@@ -58,8 +56,27 @@ To compile, you'll need the corresponding devel packages as well.
 
 Run 'make' in this directory.
 Now you're ready to run './p2jaudio'.
-If you want to install it to '/usr/bin', for now you'll have to do it manually:
-	Run 'sudo cp p2jaudio /usr/bin/p2jaudio' (for Debian) or otherwise
-	run 'su -c "cp p2jaudio /usr/bin/p2jaudio"'.
 
-	Now you can run p2jaudio by running 'p2jaudio' in the terminal.
+If you want to install it to '/usr/bin', for now you'll have to do it manually:
+  * Run 'sudo cp p2jaudio /usr/bin/p2jaudio' (for Debian) or otherwise
+  run 'su -c "cp p2jaudio /usr/bin/p2jaudio"'.
+  * Now you can run p2jaudio by running 'p2jaudio' in the terminal.
+
+
+= TODO =
+
+In order of importance, the first one is the most important.
+  * Clean up unnecessary locks and mutexvariables. And clean up code.
+  * Use enumerations for 'bufferUnderrunSide' (or just 'side'), 'benchmarkStatus', 'state' and 'todo' variables.
+  * Write more documentation in the code and optionally function headers with preconditions.
+  * Bug testing.
+  * Improve performance. (1 low latency pipe (48000Hz) @ 1024periodSize uses in total 1% CPU on an Intel i5, and 3% @ 128periodSize)
+  * Create the ability to pass latency and bufferSize cmd arguments, so that no benchmark is required.
+  * Use pulse instead of pulse-simple to allow automatic creation of pipes and detection of NAME and NUM_CHANNELS.
+    This delivers the advantage of less cpu-usage and memory-usage per pipe, and
+	it can be used to synchronise pipes (to the maximum latency of all pipes).
+    Then 'p2jaudio' may have to become a daemon.
+  * Implement './configure'.
+  * Implement 'make install'.
+  * Create header file.
+  * Optionally create the opposite of this program: so something like 'j2paudio'.
