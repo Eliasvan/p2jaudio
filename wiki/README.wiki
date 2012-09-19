@@ -1,5 +1,5 @@
 #summary Text in the README file.
-#labels README
+#labels README,TODO,INSTALL
 
 = Name =
 
