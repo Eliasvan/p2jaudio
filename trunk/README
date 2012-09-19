@@ -35,3 +35,18 @@ capture each micro on a different track, and after recording the song,
 you'll have to shift the first micro track with 2ms back in time to align the 2 micros appropriately.
 (Or if you're using tracks of realtime signals as well,
 you may want to shift both micro's respectively 5ms and 3ms back in time.)
+
+Dependencies
+------------
+* pulseaudio (and libs) >= 0.9.21
+* jack-audio-connection-kit (and libs) >= 1.9.4
+To compile, you'll need the corresponding devel packages.
+
+Install
+-------
+Run 'make' in this directory.
+Now you're ready to run './p2jaudio'.
+If you want to install it to '/usr/bin', for now you'll have to do it manually:
+	Run 'sudo cp p2jaudio /usr/bin/p2jaudio' (for Debian) or otherwise
+	run 'su -c "cp p2jaudio /usr/bin/p2jaudio"'.
+	Now you can run p2jaudio by running 'p2jaudio' in the terminal.
