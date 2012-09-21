@@ -29,18 +29,18 @@ run this program and then select in the 'pavucontrol' program the 'Record' tab,
 select 'Show Applications', then 'p2jaudio' will be listed, now select 'record from <desired_Source_device>',
 after this, quit 'p2jaudio' (by keyboardinterrupt Ctrl-C for example) and restart it.
 Of course you can run multiple instances of 'p2jaudio'.
-For example if there are 2 usb micro's displayed as 2 soundcards,
-will latencies of respectively 5ms and 3ms, you can use Ardour (recorder) to
+For example if there are 2 usb micros displayed as 2 soundcards,
+will latencies of respectively 5ms and 3ms, you can use Ardour (as recorder) to
 capture each micro on a different track, and after recording the song,
 you'll have to shift the first micro track with 2ms back in time to align the 2 micros appropriately.
 (Or if you're using tracks of realtime signals as well,
-you may want to shift both micro's respectively 5ms and 3ms back in time.)
+you may want to shift both micros respectively 5ms and 3ms back in time.)
 
 Dependencies
 ------------
 * pulseaudio (and libs) >= 0.9.21
 * jack-audio-connection-kit (and libs) >= 1.9.4
-To compile, you'll need the corresponding devel packages.
+To compile, you'll need the corresponding devel packages as well.
 
 Install
 -------
@@ -50,3 +50,8 @@ If you want to install it to '/usr/bin', for now you'll have to do it manually:
 	Run 'sudo cp p2jaudio /usr/bin/p2jaudio' (for Debian) or otherwise
 	run 'su -c "cp p2jaudio /usr/bin/p2jaudio"'.
 	Now you can run p2jaudio by running 'p2jaudio' in the terminal.
+
+Bugs
+----
+* There is a possible deadlock somewhere in the pulse-start and/or -process thread.
+  This will prevent 'p2jaudio' to start up. So to quit it, you'll have to kill it will signal 9.
