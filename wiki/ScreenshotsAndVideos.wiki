@@ -1,0 +1,13 @@
+#summary Some screenshots and video examples
+#labels Featured,Phase-Deploy,Screenshot,Video,Tutorial
+
+= Screenshots =
+
+Screenshot of a 3-audio-input-devices-setup.
+[http://p2jaudio.googlecode.com/svn/trunk/doc/3-audio-input-devices-setup.png]
+
+= Videos =
+
+Demonstration of compiling (, installing) and using 'p2jaudio'.
+Also includes making a 3-audio-input-devices-setup.
+<wiki:video url="http://www.youtube.com/watch?v=QtZEDKotIY8"/>
