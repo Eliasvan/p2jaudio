@@ -4,7 +4,7 @@
 = Screenshots =
 
 Screenshot of a 3-audio-input-devices-setup.
-[http://p2jaudio.googlecode.com/svn/trunk/doc/3-audio-input-devices-setup.png]
+[http://p2jaudio.googlecode.com/svn/trunk/doc/3-audio-input-devices-setup2.png]
 
 = Videos =
 
