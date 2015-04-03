@@ -1,9 +1,9 @@
 README
 ------
 
-Warning:
+_Warning:
 Automatically exported from "code.google.com/p/p2jaudio",
-so some things might be wrongly converted.
+so some things might be wrongly converted._
 
 Name
 ----
